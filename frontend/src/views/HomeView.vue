@@ -3,7 +3,8 @@
     <img alt="Vue logo" src="@/assets/logo.png">
     <header>
       <h1>Randall Reilly Vue.js Assessment</h1>
-      <p>By <a href="https://evheath.github.io/">Elliot Heath</a></p>
+      <h2>By <a href="https://evheath.github.io/">Elliot Heath</a></h2>
+      <p>Click <router-link to="/posts">here</router-link> to view the posts.</p>
     </header>
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
   </div>
