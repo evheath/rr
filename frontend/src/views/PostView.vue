@@ -45,7 +45,7 @@ export default {
     async saveChanges() {
       this.post.title = this.newTitle;
       this.post.body = this.newBody;
-      await axios.patch(`/posts/${this.postId}.json`,{post:this.post})
+      await axios.patch(`/api/posts/${this.postId}`,{post:this.post})
       this.editing = false;
     },
     startEditing() {
@@ -61,7 +61,7 @@ export default {
   },
   name: 'PostView',
   async mounted() {
-    const rawJSON = await axios.get(`/posts/${this.postId}.json`);
+    const rawJSON = await axios.get(`/api/posts/${this.postId}`);
     this.loading = false;
     this.post = rawJSON.data;
   },
