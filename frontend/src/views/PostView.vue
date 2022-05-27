@@ -45,7 +45,7 @@ export default {
     async saveChanges() {
       this.post.title = this.newTitle;
       this.post.body = this.newBody;
-      await axios.patch(`/api/posts/${this.postId}`,{post:this.post})
+      await axios.patch(`/api/posts/${this.postId}`,this.post)
       this.editing = false;
     },
     startEditing() {
