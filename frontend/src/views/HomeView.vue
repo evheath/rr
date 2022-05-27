@@ -4,7 +4,8 @@
     <header>
       <h1>Randall Reilly Vue.js Assessment</h1>
       <h2>By <a href="https://evheath.github.io/">Elliot Heath</a></h2>
-      <p>Click <router-link to="/posts">here</router-link> to view the posts.</p>
+      <!-- <p>Click <router-link to="/posts">here</router-link> to view the posts.</p> -->
+      <p>Source code can be found <a target="_blank" href="https://github.com/evheath/rr">here</a>.</p>
     </header>
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
   </div>

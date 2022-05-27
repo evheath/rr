@@ -1,8 +1,12 @@
 <template>
   <div class="about">
     <h1>Here are all the posts:</h1>
+    <p v-for="post of posts" :key="post.id">
 
-    <p>{{posts}}</p>
+        #{{post.id}} : {{post.title}}
+    </p>
+
+    <!-- <p>{{posts}}</p> -->
   </div>
 </template>
 
@@ -16,10 +20,11 @@ export default {
     // HelloWorld
   },
   async mounted() {
-    this.posts = await axios.get('/posts.json');
+    const rawJSON = await axios.get('/posts.json');
+    this.posts = rawJSON.data;
   },
   data: () => ({
-    posts:null,
+    posts:[],
   })
 }
 </script>
