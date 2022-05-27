@@ -14,6 +14,14 @@ const routes = [
     // this generates a separate chunk (posts.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "posts" */ '../views/PostsView.vue')
+  },
+  {
+    path: '/post/:id',
+    name: 'post',
+    // route level code-splitting
+    // this generates a separate chunk (post.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "post" */ '../views/PostView.vue')
   }
 ]
 
